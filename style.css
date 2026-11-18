@@ -75,6 +75,7 @@ footer{background:#171817;color:#eee;padding:58px 8% 22px}
 .footer-col a:hover{color:#d8bd82}
 .footer-bottom{border-top:1px solid #ffffff24;padding-top:18px;display:flex;justify-content:space-between;color:#888;font-size:11px}
 .footer-bottom{justify-content:center;text-align:center}
+@media(max-width:760px){.hero-slide{height:56.25vw;min-height:0;max-height:none;aspect-ratio:16/9}}
 @media(max-width:760px){
   .hero-copy{left:5%;right:5%;bottom:7%;max-width:37%}
   .hero-copy h1{font-size:clamp(14px,4vw,30px);margin:1vw 0}
