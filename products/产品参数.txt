@@ -1,0 +1,17 @@
+AMT-ST100h
+{
+	NominalImpedance：8 Ω
+	Sensitivity：92 dB
+	ResonantFreq.：3.5KHz
+	Freq.Response：Fo~50 KHz
+	NominalPower:  15  Watts
+	MaxPower：30   Watts
+	Diaphragm：Kapton
+	Magnet：Neodymium
+}
+特种电源
+{
+	最大电流：10A
+	额定电压：250V~
+	最大功率：2500W
+}

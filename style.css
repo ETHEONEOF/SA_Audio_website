@@ -6,12 +6,17 @@ a{color:inherit;text-decoration:none}
 .brand img{width:58px;height:58px;object-fit:contain;filter:brightness(0) saturate(100%) invert(67%) sepia(17%) saturate(755%) hue-rotate(5deg) brightness(91%) contrast(86%)}
 .brand small{display:block;font-size:9px;font-weight:400;letter-spacing:.18em;color:#aaa}
 .hero-slide{height:min(740px,68vw);min-height:510px;position:relative;overflow:hidden;background:#343432;color:white}
-.slide-image{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;transition:opacity .5s}
+.hero-video{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;object-position:center;background:#171817}
 .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.48),rgba(0,0,0,.03) 80%),linear-gradient(0deg,rgba(0,0,0,.3),transparent 45%)}
-.hero-social{position:absolute;z-index:3;top:28px;right:34px;display:flex;gap:12px}
-.hero-social button{width:42px;height:42px;display:grid;place-items:center;border:1px solid #ffffffa8;border-radius:50%;background:#0003;color:#fff;cursor:default;transition:background .2s}
-.hero-social button:hover{background:#ffffff25}
-.hero-social svg{width:21px;height:21px;fill:currentColor}
+.contact-social{display:flex;justify-content:flex-end;gap:10px;margin:0 0 22px}
+.contact-social button,.contact-social .social-link{width:40px;height:40px;display:grid;place-items:center;border:1px solid #ffffff70;border-radius:50%;background:#ffffff0d;color:#fff;cursor:pointer;transition:background .2s}
+.contact-social button:hover,.contact-social .social-link:hover{background:#ffffff25}
+.contact-social svg{width:20px;height:20px;fill:currentColor}
+.wechat-modal{position:fixed;inset:0;margin:auto;border:0;border-radius:12px;padding:22px;background:#fff;color:#222;box-shadow:0 18px 70px #0005;width:min(90vw,390px);text-align:center}
+.wechat-modal::backdrop{background:#0009;backdrop-filter:blur(3px)}
+.wechat-modal img{display:block;width:100%;height:auto}
+.wechat-modal p{margin:12px 0 0;font-size:14px}
+.wechat-close{position:absolute;right:8px;top:8px;width:32px;height:32px;border:0;border-radius:50%;background:#eee;color:#333;font-size:24px;line-height:1;cursor:pointer}
 .hero-copy{position:absolute;left:5%;bottom:7%;max-width:440px;z-index:1}
 .eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase}
 .hero-copy .eyebrow{color:#e6d6b8;font-size:10px}
@@ -37,6 +42,8 @@ a{color:inherit;text-decoration:none}
 .product-art:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.72),rgba(0,0,0,.04) 76%)}
 .product-art span{position:relative;z-index:1;font-family:Georgia,serif;font-size:clamp(65px,8vw,100px);letter-spacing:.08em;color:#e4e1da;text-shadow:0 15px 35px #0005}
 .art-one{background:radial-gradient(ellipse,#7a7b79,#292a29 68%,#171817)}
+.art-st100h{background:#2b2929 url('images/productImg/AMT-ST100h/正侧面.png') center/cover no-repeat}
+.art-power{background:#292a2d url('images/productImg/特种波导电源/电源.jpg') center/cover no-repeat}
 .art-two{background:radial-gradient(ellipse,#c8c7c1,#797973 72%,#373834)}
 .art-two span{color:#f0eee8}
 .art-three{background:radial-gradient(ellipse,#96968f,#4b4c48 70%,#242522)}
@@ -58,7 +65,7 @@ a{color:inherit;text-decoration:none}
 .dark-link{border-color:#333;margin-top:16px}
 .experience-image{background:linear-gradient(0deg,#0002,#0000),url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85') center/cover}
 footer{background:#171817;color:#eee;padding:58px 8% 22px}
-.footer-main{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:42px;padding-bottom:48px}
+.footer-main{display:grid;grid-template-columns:1.1fr repeat(3,minmax(0,1fr));gap:32px;padding-bottom:48px}
 .footer-brand{color:#fff}
 .footer-slogan{font-size:20px;line-height:1.9;font-weight:300;letter-spacing:.08em;margin-top:22px}
 .footer-col h3{font-weight:400;letter-spacing:.1em;font-size:14px;margin:6px 0 20px}
@@ -69,13 +76,10 @@ footer{background:#171817;color:#eee;padding:58px 8% 22px}
 .footer-bottom{justify-content:center;text-align:center}
 @media(max-width:760px){
   .hero-slide{min-height:570px;height:78vh;max-height:740px}
-  .hero-social{top:18px;right:18px;gap:9px}
-  .hero-social button{width:38px;height:38px}
   .hero-copy{left:7%;right:7%;bottom:8%}
   .hero-copy h1{font-size:34px}
   .hero-brand{font-size:44px;top:42%}
   .hero-brand img{width:145px}
-  .dots{bottom:22px}
   .products{padding:70px 6% 78px}
   .section-heading{margin-bottom:32px}
   .section-heading h2,.experience h2{font-size:28px}
@@ -91,18 +95,17 @@ footer{background:#171817;color:#eee;padding:58px 8% 22px}
   .experience-copy{padding:58px 8%}
   .experience-image{height:290px}
   footer{padding:44px 7% 20px}
-  .footer-main{grid-template-columns:1fr 1fr;gap:26px}
-  .footer-brand-block{grid-column:1/-1}
+  .footer-main{grid-template-columns:1fr;gap:18px}
+  .footer-brand-block{grid-column:auto}
   .footer-slogan{font-size:18px}
   .footer-bottom{gap:12px;flex-direction:column}
 }
 @media(max-width:420px){
-  .hero-slide{min-height:540px;height:88svh}
+  .hero-slide{min-height:540px;height:88svh;max-height:760px}
   .hero-brand{top:39%;font-size:38px;gap:8px}
   .hero-brand img{width:122px}
   .hero-copy h1{font-size:30px;letter-spacing:.04em}
   .hero-copy>p:not(.eyebrow){font-size:12px}
-  .hero-social{top:14px;right:14px}
   .products{padding-left:18px;padding-right:18px}
   .section-heading h2{font-size:25px;letter-spacing:.04em}
   .section-heading>p:last-child{font-size:12px}
@@ -112,7 +115,5 @@ footer{background:#171817;color:#eee;padding:58px 8% 22px}
   .product-info h3{font-size:20px}
   .product-secondary .product-info{left:16px;right:12px;bottom:14px}
   .experience-copy{padding-left:22px;padding-right:22px}
-  .footer-main{grid-template-columns:1fr;gap:18px}
-  .footer-brand-block{grid-column:auto}
   .footer-col h3{margin-bottom:10px}
 }
