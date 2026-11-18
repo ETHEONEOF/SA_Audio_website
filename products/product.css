@@ -12,6 +12,11 @@ a{color:inherit;text-decoration:none}
 .amt-detail-image{display:block;background:#e9e4e2}
 .amt-detail-image:after{background:linear-gradient(0deg,rgba(0,0,0,.18),transparent 55%)}
 .amt-detail-image img{width:100%;height:100%;object-fit:cover;display:block}
+.artist4-detail-image{background:#dedbd6}
+.artist4-detail-image:after{background:linear-gradient(0deg,rgba(0,0,0,.12),transparent 55%)}
+.artist4-detail-image img{width:100%;height:100%;object-fit:contain;display:block}
+.artist4-gallery{grid-template-columns:repeat(2,minmax(0,1fr));max-width:900px}
+.artist4-gallery img{aspect-ratio:1/1;object-fit:contain;background:#e8e6e2}
 .product-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
 .product-gallery-single{grid-template-columns:minmax(0,1fr);max-width:720px}
 .product-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
@@ -29,6 +34,8 @@ a{color:inherit;text-decoration:none}
 .spec-row span:last-child{text-align:right}
 .detail-lists{background:#f0eee8}
 .list-columns{display:grid;grid-template-columns:1fr 1fr;gap:54px}
+.kit-list-single>div{grid-column:1/-1}
+.kit-list-single ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:54px}
 .list-columns h3{font-size:16px;font-weight:400;letter-spacing:.08em;border-bottom:1px solid #d7d3c9;padding-bottom:14px}
 .list-columns ul{list-style:none;margin:0;padding:0}
 .list-columns li{padding:10px 0;color:#666;font-size:14px}
@@ -48,6 +55,7 @@ a{color:inherit;text-decoration:none}
   .spec-row span:first-child{flex:0 0 37%}
   .spec-row span:last-child{overflow-wrap:anywhere}
   .list-columns{grid-template-columns:1fr;gap:25px}
+  .kit-list-single ul{grid-template-columns:1fr;column-gap:0}
   .detail-footer{gap:8px;flex-direction:column;align-items:center}
 }
 @media(max-width:420px){

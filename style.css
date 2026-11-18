@@ -5,7 +5,7 @@ a{color:inherit;text-decoration:none}
 .brand{display:flex;align-items:center;gap:13px;font-size:19px;font-weight:600;letter-spacing:.13em}
 .brand img{width:58px;height:58px;object-fit:contain;filter:brightness(0) saturate(100%) invert(67%) sepia(17%) saturate(755%) hue-rotate(5deg) brightness(91%) contrast(86%)}
 .brand small{display:block;font-size:9px;font-weight:400;letter-spacing:.18em;color:#aaa}
-.hero-slide{height:min(740px,68vw);min-height:510px;position:relative;overflow:hidden;background:#343432;color:white}
+.hero-slide{height:min(740px,68vw);min-height:510px;position:relative;overflow:hidden;background:#343432 url('images/sa-home-poster.jpg') center/cover no-repeat;color:white}
 .hero-video{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;object-position:center;background:#171817}
 .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.48),rgba(0,0,0,.03) 80%),linear-gradient(0deg,rgba(0,0,0,.3),transparent 45%)}
 .contact-social{display:flex;justify-content:flex-end;gap:10px;margin:0 0 22px}
@@ -44,6 +44,7 @@ a{color:inherit;text-decoration:none}
 .art-one{background:radial-gradient(ellipse,#7a7b79,#292a29 68%,#171817)}
 .art-st100h{background:#2b2929 url('images/productImg/AMT-ST100h/正侧面.png') center/cover no-repeat}
 .art-power{background:#292a2d url('images/productImg/特种波导电源/电源.jpg') center/cover no-repeat}
+.art-artist4{background:#d7d5d1 url('images/productImg/artist-4-side.jpg') center/contain no-repeat}
 .art-two{background:radial-gradient(ellipse,#c8c7c1,#797973 72%,#373834)}
 .art-two span{color:#f0eee8}
 .art-three{background:radial-gradient(ellipse,#96968f,#4b4c48 70%,#242522)}
